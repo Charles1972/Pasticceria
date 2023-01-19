@@ -1,9 +1,9 @@
-export interface ICake {
+export interface IProduct {
   name: string;
   price: number;
   quantity: number;
   image?: string;
-  ingredients: IIngredient[];
+  ingredients?: IIngredient[];
 }
 
 export interface IIngredient {

@@ -1,0 +1,56 @@
+th, td {
+  border-left: 1px solid rgba(lightgrey, 0.4);
+}
+
+.main {
+  @apply overflow-auto w-full rounded-md border;
+
+  .borders {
+    @apply border-b border-gray-50 shadow;
+  }
+
+  table {
+    @apply divide-y divide-gray-300 w-full;
+
+    thead {
+      @apply bg-gray-100;
+
+      tr {
+        @apply text-blue-500 text-xs;
+      }
+    }
+
+    tbody {
+      @apply bg-white divide-y divide-gray-300;
+    }
+  }
+}
+
+
+td {
+  @apply px-3 sm:px-6 break-words;
+
+  &.number {
+    @apply text-right;
+  }
+}
+
+.no-int-border-l {
+  border-left: 0;
+}
+
+.thumbnail-header {
+  @apply py-3 px-3 sm:px-6 text-gray-100;
+}
+
+.thumbnail-row {
+  @apply py-2 text-sm;
+
+  border-left: 0;
+  min-width: 70px;
+
+  img {
+    @apply mx-auto;
+    height: 36px;
+  }
+}

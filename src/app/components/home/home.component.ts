@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import productsJSON from '../../../assets/products.json';
 import {environment} from "../../../environments/environment";
+import {IProduct} from "../../classes/interfaces";
 
 @Component({
   selector: 'app-home',
@@ -8,7 +10,7 @@ import {environment} from "../../../environments/environment";
 })
 export class HomeComponent implements OnInit {
   title: string = environment.title;
-
+  products: IProduct[] = productsJSON;
   constructor() { }
 
   ngOnInit(): void {

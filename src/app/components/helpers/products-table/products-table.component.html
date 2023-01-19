@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="borders">
+    <table>
+      <thead>
+        <tr>
+          <th>Immagine</th>
+          <th>Prodotto</th>
+          <th>Prezzo</th>
+          <th>Quantità</th>
+        </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let item of products; let i = index" class="text-gray-900 hover:bg-blue-100">
+        <td class="thumbnail-row">
+          <img *ngIf="item.image" role="button" alt="" src="{{item.image}}">
+        </td>
+        <td role="button">
+          {{item.name}}
+        </td>
+        <td role="button" class="number">
+          {{item.price}}
+        </td>
+        <td role="button" class="number">
+          {{item.quantity}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
