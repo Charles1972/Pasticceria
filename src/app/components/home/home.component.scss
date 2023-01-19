@@ -1,0 +1,15 @@
+.main-container {
+  @apply container mx-auto mt-5;
+
+  .title-container {
+    @apply rounded-md sm:rounded-xl;
+    @apply border border-blue-600 bg-blue-400;
+    @apply py-3 sm:py-4 md:py-5 lg:py-6;
+
+    .title {
+      @apply font-semibold font-sans text-center text-white;
+      @apply text-xl sm:text-4xl md:text-5xl lg:text-6xl;
+    }
+  }
+
+}
