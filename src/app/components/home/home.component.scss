@@ -3,8 +3,19 @@
 
   .title-container {
     @apply rounded-md sm:rounded-xl;
-    @apply border border-blue-600 bg-blue-400;
+    @apply border border-blue-600;
+    background-color: #f92500;
+
     @apply py-3 sm:py-4 md:py-5 lg:py-6;
+    @apply flex justify-between;
+
+    .logo {
+      @apply mx-6;
+
+      img {
+        @apply h-8 md:h-10 lg:h-14;
+      }
+    }
 
     .title {
       @apply font-semibold font-sans text-center text-white;
