@@ -12,7 +12,8 @@ export function toggleModal(modalId: string, show: boolean, focusElementId: stri
       // create backdrop element
       let backdropEl = document.createElement('div');
       backdropEl.setAttribute('modal-backdrop', '');
-      backdropEl.classList.add('bg-black', 'bg-opacity-60', 'fixed', 'inset-0', 'z-40');
+      backdropEl.classList.add('bg-black', 'bg-opacity-50', 'fixed', 'inset-0', 'z-40');
+      console.log('document.querySelector(\'body\')', document.querySelector('body'))
       document.querySelector('body').append(backdropEl);
 
       if (focusElementId != '') {

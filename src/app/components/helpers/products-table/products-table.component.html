@@ -3,8 +3,21 @@
     <table>
       <thead>
         <tr>
-          <th class="thumbnail-header">Immagine</th>
-          <th>Prodotto</th>
+          <th class="thumbnail-header"></th>
+          <th class="px-3">
+            <span>Prodotto</span>
+            <div [ngSwitch]="sortTStatus" role="button" class="sort-button float-right" (click)="onSortNamePressed()">
+              <svg *ngSwitchCase="eTableSortStatus.none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
+                <path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/>
+              </svg>
+              <svg *ngSwitchCase="eTableSortStatus.asc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
+                <path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"/>
+              </svg>
+              <svg *ngSwitchCase="eTableSortStatus.desc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
+                <path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+              </svg>
+            </div>
+          </th>
           <th>Prezzo</th>
           <th>Quantità</th>
         </tr>
@@ -17,24 +30,17 @@
             <img *ngIf="item.image" role="button" alt="" src="{{item.image}}">
           </div>
         </td>
-        <td role="button">
-          {{item.name}}
-        </td>
-        <td role="button" class="number">
-          {{item.price}}
-        </td>
-        <td role="button" class="number">
-          {{item.quantity}}
-        </td>
+        <td role="button">{{item.name}}</td>
+        <td role="button" class="number">€. {{item.price | number:'1.2-2'}}</td>
+        <td role="button" class="number">{{item.quantity}}</td>
       </tr>
       </tbody>
     </table>
   </div>
 </div>
 
-<modal [modalId]="'product-detail-modal'" [title]="'Titolo'">
+<modal [modalId]="'product-detail-modal'" [title]="">
   <div body class="modal-body-details">
-
+    <app-product-details [product]="selectedProduct"></app-product-details>
   </div>
-
 </modal>

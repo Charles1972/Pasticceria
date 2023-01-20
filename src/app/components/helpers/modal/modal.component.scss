@@ -2,18 +2,7 @@
   @apply overflow-y-auto overflow-x-hidden fixed z-50 justify-center inset-0;
 
   .modal-size {
-    @apply relative px-4 max-w-2xl h-auto w-full;
-  }
-
-  &.align-center {
-    @media screen and (min-width: 640px) and (min-height: 640px) {
-      @apply sm:items-center;
-    }
-
-  }
-
-  &.not-align-center {
-    @apply pt-5 md:pt-3;
+    @apply relative px-4 max-w-xl h-auto w-full;
   }
 
   .modal-container {

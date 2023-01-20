@@ -1,4 +1,4 @@
-<div [id]="modalId" aria-hidden="true" class="hidden modal-background align-center" (click)="exitOnClick()">
+<div [id]="modalId" aria-hidden="true" class="hidden modal-background items-center" (click)="exitOnClick()">
   <div class="modal-size">
     <div class="modal-container">
       <div>
@@ -15,17 +15,6 @@
         <!-- Modal body -->
         <div class="body-container">
           <ng-content select="[body]"></ng-content>
-        </div>
-        <!-- Modal footer -->
-        <div class="footer-container">
-          <div #ref class="w-full"><ng-content select="[footer]"></ng-content></div>
-          <ng-container *ngIf="!ref.hasChildNodes()">
-            <div class="flex justify-end w-full">
-<!--              <custom-button cssType="btn-primary" css="" (click)="closeModal(true)" [text]="'OK'"></custom-button>-->
-<!--              <custom-button cssType="btn-outline-black" css="ml-2" (click)="closeModal(false)"-->
-<!--                             [text]="'Cancel' | translate"></custom-button>-->
-            </div>
-          </ng-container>
         </div>
       </div>
     </div>
