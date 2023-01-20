@@ -10,10 +10,10 @@ import {IProduct} from "../../classes/interfaces";
 })
 export class HomeComponent implements OnInit {
   title: string = environment.title;
-  products: IProduct[] = productsJSON;
+  products: IProduct[] = productsJSON; //Products came from JSON embedded
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

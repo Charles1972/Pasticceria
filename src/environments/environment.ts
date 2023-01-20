@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  title: 'Pasticceria Grifo'
+  title: 'Pasticceria Il Grifo'
 };
 
 /*
