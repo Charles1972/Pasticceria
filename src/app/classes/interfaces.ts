@@ -4,6 +4,7 @@ export interface IProduct {
   quantity: number;
   image?: string;
   ingredients?: IIngredient[];
+  madeAt?: string;
 }
 
 export interface IIngredient {

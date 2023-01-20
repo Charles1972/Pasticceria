@@ -3,7 +3,7 @@
     <table>
       <thead>
         <tr>
-          <th>Immagine</th>
+          <th class="thumbnail-header">Immagine</th>
           <th>Prodotto</th>
           <th>Prezzo</th>
           <th>Quantità</th>
@@ -11,9 +11,11 @@
       </thead>
 
       <tbody>
-      <tr *ngFor="let item of products; let i = index" class="text-gray-900 hover:bg-blue-100">
+      <tr *ngFor="let item of products; let i = index" class="text-gray-900 hover:bg-blue-100" (click)="onItemClick(item)">
         <td class="thumbnail-row">
-          <img *ngIf="item.image" role="button" alt="" src="{{item.image}}">
+          <div class="img-container">
+            <img *ngIf="item.image" role="button" alt="" src="{{item.image}}">
+          </div>
         </td>
         <td role="button">
           {{item.name}}
@@ -29,3 +31,10 @@
     </table>
   </div>
 </div>
+
+<modal [modalId]="'product-detail-modal'" [title]="'Titolo'">
+  <div body class="modal-body-details">
+
+  </div>
+
+</modal>

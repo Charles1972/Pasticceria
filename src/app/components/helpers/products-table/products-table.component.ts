@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IProduct} from "../../../classes/interfaces";
+import {toggleModal} from "../../../classes/shared-functions";
 
 @Component({
   selector: 'app-products-table',
@@ -14,4 +15,7 @@ export class ProductsTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onItemClick(item: IProduct) {
+    toggleModal('product-detail-modal', true);
+  }
 }

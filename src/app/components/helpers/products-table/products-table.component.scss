@@ -1,5 +1,6 @@
 th, td {
   border-left: 1px solid rgba(lightgrey, 0.4);
+  @apply text-xs sm:text-lg;
 }
 
 .main {
@@ -40,17 +41,20 @@ td {
 }
 
 .thumbnail-header {
-  @apply py-3 px-3 sm:px-6 text-gray-100;
+  @apply py-3 px-3 sm:px-6;
 }
 
 .thumbnail-row {
-  @apply py-2 text-sm;
+  @apply py-2 text-sm flex justify-center;
 
   border-left: 0;
-  min-width: 70px;
+  //min-width: 70px;
 
-  img {
-    @apply mx-auto;
-    height: 36px;
+  .img-container {
+    @apply mx-auto inline-block rounded sm:rounded-md overflow-hidden;
+
+    img {
+      @apply h-10 sm:h-20;
+    }
   }
 }

@@ -3,6 +3,7 @@ module.exports = {
   prefix: '',
   content: [
     './src/**/*.{html,ts}',
+    './src/**/**/*.{html,ts}'
   ],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
